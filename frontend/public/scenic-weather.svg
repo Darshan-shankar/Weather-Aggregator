@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7ab5d8"/>
+      <stop offset="0.58" stop-color="#b8d5df"/>
+      <stop offset="1" stop-color="#e6d9bd"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fa8b2"/>
+      <stop offset="1" stop-color="#314d5a"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#71828b"/>
+      <stop offset="1" stop-color="#344a56"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1510" cy="210" r="72" fill="#f9edbd" opacity=".9"/>
+  <g fill="#fff" opacity=".82">
+    <ellipse cx="310" cy="190" rx="150" ry="42"/>
+    <ellipse cx="220" cy="205" rx="110" ry="34"/>
+    <ellipse cx="410" cy="210" rx="125" ry="38"/>
+    <ellipse cx="1040" cy="310" rx="180" ry="46"/>
+    <ellipse cx="920" cy="328" rx="120" ry="38"/>
+    <ellipse cx="1170" cy="330" rx="145" ry="40"/>
+  </g>
+  <path d="M0 700 L210 510 L360 650 L620 390 L820 610 L1080 350 L1300 590 L1510 420 L1920 690 L1920 1080 L0 1080 Z" fill="url(#mountain)" opacity=".72"/>
+  <path d="M460 540 L620 390 L690 470 L650 450 L620 470 L590 438 L540 520 Z" fill="#edf0eb" opacity=".78"/>
+  <path d="M930 510 L1080 350 L1150 432 L1110 412 L1080 424 L1040 392 L990 500 Z" fill="#edf0eb" opacity=".8"/>
+  <path d="M0 720 L310 620 L560 690 L850 600 L1120 680 L1430 590 L1920 710 L1920 1080 L0 1080 Z" fill="#465f50"/>
+  <g fill="#263f36">
+    <path d="M120 760 l70 -220 l70 220z"/><path d="M210 780 l95 -300 l95 300z"/>
+    <path d="M1420 760 l75 -240 l75 240z"/><path d="M1540 790 l105 -330 l105 330z"/>
+    <path d="M1280 790 l80 -250 l80 250z"/>
+  </g>
+  <path d="M0 760 Q480 720 920 790 T1920 760 L1920 1080 L0 1080 Z" fill="url(#lake)"/>
+  <path d="M0 820 Q420 790 760 835 T1500 820 T1920 825" fill="none" stroke="#d8e4de" stroke-width="5" opacity=".45"/>
+  <path d="M0 910 Q450 865 820 920 T1700 900 T1920 920" fill="none" stroke="#d8e4de" stroke-width="4" opacity=".32"/>
+  <rect y="980" width="1920" height="100" fill="#172d31" opacity=".28"/>
+</svg>

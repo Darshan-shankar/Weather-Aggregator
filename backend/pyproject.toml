@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weather-aggregator"
+version = "0.1.0"
+description = "Weather Aggregator service (FastAPI, hexagonal architecture)"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "alembic>=1.13",
+    "requests>=2.31",
+    "pydantic-settings>=2.2",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8",
+    "responses>=0.25",
+    "pact-python>=2.2,<3",
+    "behave>=1.2.6",
+    "httpx>=0.27",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore::PendingDeprecationWarning",
+    "ignore::DeprecationWarning:pact.*",
+    "ignore:Using `httpx` with `starlette.testclient`:DeprecationWarning",
+]
+markers = [
+    "unit: pure domain/service tests (no I/O)",
+    "adapter: outbound adapter tests with stubbed HTTP",
+    "contract: Pact consumer/provider tests",
+    "integration: needs a real PostgreSQL",
+    "component: full application, external API stubbed",
+]

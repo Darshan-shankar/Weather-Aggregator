@@ -1,0 +1,284 @@
+I, [2026-11-04T10:34:45.131326 #3806]  INFO -- : Cleared interactions
+I, [2026-11-04T10:34:45.134767 #3806]  INFO -- : Registered expected interaction GET /v1/search?name=Bangalore&count=1&language=en&format=json
+D, [2026-11-04T10:34:45.135024 #3806] DEBUG -- : {
+  "description": "a geocoding request for Bangalore",
+  "providerState": "the city Bangalore exists",
+  "request": {
+    "method": "GET",
+    "path": "/v1/search",
+    "query": {
+      "name": [
+        "Bangalore"
+      ],
+      "count": [
+        "1"
+      ],
+      "language": [
+        "en"
+      ],
+      "format": [
+        "json"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "results": {
+        "json_class": "Pact::ArrayLike",
+        "contents": {
+          "name": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "Bangalore"
+          },
+          "country": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "India"
+          },
+          "latitude": {
+            "json_class": "Pact::SomethingLike",
+            "contents": 12.97
+          },
+          "longitude": {
+            "json_class": "Pact::SomethingLike",
+            "contents": 77.59
+          },
+          "timezone": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "Asia/Kolkata"
+          }
+        },
+        "min": 1
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2026-11-04T10:34:45.137531 #3806]  INFO -- : Received request GET /v1/search?name=Bangalore&count=1&language=en&format=json
+D, [2026-11-04T10:34:45.137775 #3806] DEBUG -- : {
+  "path": "/v1/search",
+  "query": "name=Bangalore&count=1&language=en&format=json",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1235",
+    "User-Agent": "python-requests/2.34.2",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2026-11-04T10:34:45.138257 #3806]  INFO -- : Found matching response for GET /v1/search?name=Bangalore&count=1&language=en&format=json
+D, [2026-11-04T10:34:45.138897 #3806] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "results": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Bangalore"
+        },
+        "country": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "India"
+        },
+        "latitude": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 12.97
+        },
+        "longitude": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 77.59
+        },
+        "timezone": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Asia/Kolkata"
+        }
+      },
+      "min": 1
+    }
+  }
+}
+I, [2026-11-04T10:34:45.141204 #3806]  INFO -- : Verifying - interactions matched
+I, [2026-11-04T10:34:45.143391 #3806]  INFO -- : Writing pact for open-meteo to /home/claude/weather-aggregator/backend/pacts/weather-aggregator-open-meteo.json
+I, [2026-11-04T10:34:45.151607 #3806]  INFO -- : Cleared interactions
+I, [2026-11-04T10:34:45.154451 #3806]  INFO -- : Registered expected interaction GET /v1/search?name=Atlantis&count=1&language=en&format=json
+D, [2026-11-04T10:34:45.154536 #3806] DEBUG -- : {
+  "description": "a geocoding request for an unknown city",
+  "providerState": "no city matches Atlantis",
+  "request": {
+    "method": "GET",
+    "path": "/v1/search",
+    "query": {
+      "name": [
+        "Atlantis"
+      ],
+      "count": [
+        "1"
+      ],
+      "language": [
+        "en"
+      ],
+      "format": [
+        "json"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "generationtime_ms": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 0.4
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2026-11-04T10:34:45.157027 #3806]  INFO -- : Received request GET /v1/search?name=Atlantis&count=1&language=en&format=json
+D, [2026-11-04T10:34:45.157265 #3806] DEBUG -- : {
+  "path": "/v1/search",
+  "query": "name=Atlantis&count=1&language=en&format=json",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1235",
+    "User-Agent": "python-requests/2.34.2",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2026-11-04T10:34:45.157469 #3806]  INFO -- : Found matching response for GET /v1/search?name=Atlantis&count=1&language=en&format=json
+D, [2026-11-04T10:34:45.157518 #3806] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "generationtime_ms": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 0.4
+    }
+  }
+}
+I, [2026-11-04T10:34:45.159458 #3806]  INFO -- : Verifying - interactions matched
+I, [2026-11-04T10:34:45.161456 #3806]  INFO -- : Writing pact for open-meteo to /home/claude/weather-aggregator/backend/pacts/weather-aggregator-open-meteo.json
+I, [2026-11-04T10:34:45.166964 #3806]  INFO -- : Cleared interactions
+I, [2026-11-04T10:34:45.169180 #3806]  INFO -- : Registered expected interaction GET /v1/forecast?latitude=12.97&longitude=77.59&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cweather_code&wind_speed_unit=kmh&temperature_unit=celsius&timezone=GMT
+D, [2026-11-04T10:34:45.169273 #3806] DEBUG -- : {
+  "description": "a current weather request",
+  "providerState": "weather data exists for 12.97, 77.59",
+  "request": {
+    "method": "GET",
+    "path": "/v1/forecast",
+    "query": {
+      "latitude": [
+        "12.97"
+      ],
+      "longitude": [
+        "77.59"
+      ],
+      "current": [
+        "temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code"
+      ],
+      "wind_speed_unit": [
+        "kmh"
+      ],
+      "temperature_unit": [
+        "celsius"
+      ],
+      "timezone": [
+        "GMT"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "current": {
+        "time": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "2026-11-04T10:00"
+        },
+        "temperature_2m": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 22.4
+        },
+        "relative_humidity_2m": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 65
+        },
+        "wind_speed_10m": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 14.2
+        },
+        "weather_code": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 3
+        }
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2026-11-04T10:34:45.171584 #3806]  INFO -- : Received request GET /v1/forecast?latitude=12.97&longitude=77.59&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cweather_code&wind_speed_unit=kmh&temperature_unit=celsius&timezone=GMT
+D, [2026-11-04T10:34:45.171661 #3806] DEBUG -- : {
+  "path": "/v1/forecast",
+  "query": "latitude=12.97&longitude=77.59&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cweather_code&wind_speed_unit=kmh&temperature_unit=celsius&timezone=GMT",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1235",
+    "User-Agent": "python-requests/2.34.2",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2026-11-04T10:34:45.171913 #3806]  INFO -- : Found matching response for GET /v1/forecast?latitude=12.97&longitude=77.59&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cweather_code&wind_speed_unit=kmh&temperature_unit=celsius&timezone=GMT
+D, [2026-11-04T10:34:45.171984 #3806] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "current": {
+      "time": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "2026-11-04T10:00"
+      },
+      "temperature_2m": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 22.4
+      },
+      "relative_humidity_2m": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 65
+      },
+      "wind_speed_10m": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 14.2
+      },
+      "weather_code": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 3
+      }
+    }
+  }
+}
+I, [2026-11-04T10:34:45.174254 #3806]  INFO -- : Verifying - interactions matched
+I, [2026-11-04T10:34:45.176121 #3806]  INFO -- : Writing pact for open-meteo to /home/claude/weather-aggregator/backend/pacts/weather-aggregator-open-meteo.json

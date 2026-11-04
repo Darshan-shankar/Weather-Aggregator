@@ -1,0 +1,128 @@
+{
+  "consumer": {
+    "name": "weather-aggregator"
+  },
+  "provider": {
+    "name": "open-meteo"
+  },
+  "interactions": [
+    {
+      "description": "a geocoding request for Bangalore",
+      "providerState": "the city Bangalore exists",
+      "request": {
+        "method": "GET",
+        "path": "/v1/search",
+        "query": "name=Bangalore&count=1&language=en&format=json"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "results": [
+            {
+              "name": "Bangalore",
+              "country": "India",
+              "latitude": 12.97,
+              "longitude": 77.59,
+              "timezone": "Asia/Kolkata"
+            }
+          ]
+        },
+        "matchingRules": {
+          "$.body.results": {
+            "min": 1
+          },
+          "$.body.results[*].*": {
+            "match": "type"
+          },
+          "$.body.results[*].name": {
+            "match": "type"
+          },
+          "$.body.results[*].country": {
+            "match": "type"
+          },
+          "$.body.results[*].latitude": {
+            "match": "type"
+          },
+          "$.body.results[*].longitude": {
+            "match": "type"
+          },
+          "$.body.results[*].timezone": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "a geocoding request for an unknown city",
+      "providerState": "no city matches Atlantis",
+      "request": {
+        "method": "GET",
+        "path": "/v1/search",
+        "query": "name=Atlantis&count=1&language=en&format=json"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "generationtime_ms": 0.4
+        },
+        "matchingRules": {
+          "$.body.generationtime_ms": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "a current weather request",
+      "providerState": "weather data exists for 12.97, 77.59",
+      "request": {
+        "method": "GET",
+        "path": "/v1/forecast",
+        "query": "latitude=12.97&longitude=77.59&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cweather_code&wind_speed_unit=kmh&temperature_unit=celsius&timezone=GMT"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "current": {
+            "time": "2026-11-04T10:00",
+            "temperature_2m": 22.4,
+            "relative_humidity_2m": 65,
+            "wind_speed_10m": 14.2,
+            "weather_code": 3
+          }
+        },
+        "matchingRules": {
+          "$.body.current.time": {
+            "match": "type"
+          },
+          "$.body.current.temperature_2m": {
+            "match": "type"
+          },
+          "$.body.current.relative_humidity_2m": {
+            "match": "type"
+          },
+          "$.body.current.wind_speed_10m": {
+            "match": "type"
+          },
+          "$.body.current.weather_code": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
